@@ -618,67 +618,6 @@
       If you're running long, this is <b>not</b> the slide to cut. Cut the previous one to a single sentence instead.`
   });
 
-  /* ───────────────────── 10 · THE BOUNDARY ───────────────────── */
-  S.push({
-    act: "Part 1", wp: "What moves out", title: "The boundary", min: 1.5,
-    html: `
-      <div class="stack" style="gap:14px">
-        <div class="lbl">01 &nbsp;·&nbsp; the trade</div>
-        <h2 style="font-size:38px">We stopped trying to answer more questions —<br>and started trying to be needed for fewer.</h2>
-        <div style="width:100%">
-          <svg class="fig" viewBox="0 0 900 300" role="img" aria-label="Decisions are routed by a stakes classification: low-stakes questions go to the business function on an agentic product, high-stakes decisions stay with the data team, and both run on the same substrate">
-            <defs>
-              <marker id="m6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
-                <path d="M0 0 L10 5 L0 10 z" fill="var(--muted)"/>
-              </marker>
-              <marker id="m6p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
-                <path d="M0 0 L10 5 L0 10 z" fill="var(--pine)"/>
-              </marker>
-            </defs>
-
-            <g data-step="1">
-              <rect x="6" y="104" width="136" height="64" rx="5" fill="var(--card)" stroke="var(--line)" stroke-width="2"/>
-              <text class="serifsvg" x="74" y="130" font-size="16" font-weight="700" fill="var(--ink)" text-anchor="middle">A decision</text>
-              <text class="serifsvg" x="74" y="150" font-size="16" font-weight="700" fill="var(--ink)" text-anchor="middle">needs data</text>
-              <line x1="146" y1="136" x2="184" y2="136" stroke="var(--muted)" stroke-width="2.5" marker-end="url(#m6)"/>
-            </g>
-
-            <g data-step="2">
-              <rect x="190" y="96" width="140" height="80" rx="5" fill="var(--card)" stroke="var(--ochre)" stroke-width="3"/>
-              <text class="serifsvg" x="260" y="142" font-size="18" font-weight="700" fill="var(--ink)" text-anchor="middle">Stakes?</text>
-            </g>
-
-            <g data-step="3">
-              <path d="M334 118 H380 V62" fill="none" stroke="var(--muted)" stroke-width="2.5" marker-end="url(#m6)"/>
-              <text x="408" y="50" font-size="10.5" fill="var(--muted)">LOW STAKES</text>
-              <rect x="380" y="16" width="514" height="86" rx="5" fill="var(--secondary)" stroke="var(--line)" stroke-width="2"/>
-              <text class="serifsvg" x="402" y="76" font-size="19" font-weight="700" fill="var(--ink)">The function serves itself, on the agentic product</text>
-              <text x="402" y="96" font-size="11" fill="var(--muted)">recurring "what happened" · standard slices · first-pass diagnosis</text>
-            </g>
-
-            <g data-step="4">
-              <path d="M334 154 H380 V208" fill="none" stroke="var(--pine)" stroke-width="2.5" marker-end="url(#m6p)"/>
-              <text x="408" y="176" font-size="10.5" fill="var(--pine)">HIGH STAKES</text>
-              <rect x="380" y="168" width="514" height="86" rx="5" fill="var(--mint)" stroke="var(--pine)" stroke-width="2.5"/>
-              <text class="serifsvg" x="402" y="212" font-size="19" font-weight="700" fill="var(--ink)">Stays with us</text>
-              <text x="402" y="234" font-size="11" fill="var(--muted)">one-way doors · board packs and regulators · contested definitions</text>
-            </g>
-
-            <g data-step="5">
-              <rect x="6" y="268" width="888" height="30" rx="4" fill="var(--pine)"/>
-              <text x="450" y="288" font-size="11.5" fill="var(--mint)" text-anchor="middle" letter-spacing="1.6">BOTH PATHS RUN ON THE SAME SEMANTIC + CONTEXT LAYER</text>
-            </g>
-          </svg>
-        </div>
-      </div>`,
-    notes: `<b>Do the show of hands at the top of this slide</b> — minute ~5, not in the open. A cold room gives a limp show of hands, and a limp show of hands publicly signals you haven't got them. By now you have.<br><br>
-      Word it as a fight, not a survey: <em>"Hands up if your analysts sit inside business functions. Now — hands up if they're pooled centrally."</em> Then plant the hook: <em>"The centralised half: the next ten minutes are harder for you. I'll tell you why at the end."</em> Pays off on slide 11.<br><br>
-      <b>Dropped "classified by owner" from the Stakes box per your note</b> — the key callout is simpler now: high-stakes decisions (one-way doors, board packs and regulators, contested definitions) stay with the data team, full stop. Low-stakes goes to the function. Say it exactly that plainly.<br><br>
-      <b>Also dropped the "fill this in" note per your call — not relevant any more.</b> If you still want a name and a refused-example ready for Q&amp;A on the classification-owner question, that's now just for you to have in your head, nothing on screen prompts it.<br><br>
-      <b>Arrowheads fixed</b> — the high-stakes arrow now has its own pine-coloured arrowhead instead of sharing the grey one with the other two lines, and all three are a touch bigger. The mismatched colour was likely why it read as missing.<br><br>
-      The green bar at the bottom is the answer to the whole objection: this isn't two systems with two versions of the truth. It's one substrate with two routes.`
-  });
-
   /* ───────────────────── NIKI RCA (moved into Part 1 — a specific harness) ───────────────────── */
   S.push({
     act: "Part 1", wp: "A specific harness", title: "Niki RCA", min: 1.25,
@@ -796,7 +735,66 @@
       </div>`,
     notes: `<b>Opens Part 2. Ported from your actual org strategy, tightened to fit the slide grammar of the rest of this deck.</b> Vision card is deliberately quieter (grey border) than the other two (pine, "changing") — the contrast is the whole point, so say it rather than reading the cards: "What we're here to do hasn't moved. How we're organised to do it has."<br><br>
       <b>Data product management's sub-line folds in "data and semantic governance" from your source slide</b> — kept as one sentence rather than a fourth nested bullet, since this deck doesn't do nested bullets anywhere else.<br><br>
-      <em>Don't linger.</em> This is the setup for the capacity-mix slide right after it, which is where the real tension lives.`
+      <em>Don't linger.</em> This sets up the operating trade on the next slide, followed by the capacity shift where the real tension lives.`
+  });
+
+  /* ───────────────────── PART 2 · THE BOUNDARY ───────────────────── */
+  S.push({
+    act: "Part 2", wp: "What moves out", title: "The boundary", min: 1.5,
+    html: `
+      <div class="stack" style="gap:14px">
+        <div class="lbl">02 &nbsp;·&nbsp; the trade</div>
+        <h2 style="font-size:38px">We stopped trying to answer more questions —<br>and started trying to be needed for fewer.</h2>
+        <div style="width:100%">
+          <svg class="fig" viewBox="0 0 900 300" role="img" aria-label="Decisions are routed by a stakes classification: low-stakes questions go to the business function on an agentic product, high-stakes decisions stay with the data team, and both run on the same substrate">
+            <defs>
+              <marker id="m6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="var(--muted)"/>
+              </marker>
+              <marker id="m6p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="var(--pine)"/>
+              </marker>
+            </defs>
+
+            <g data-step="1">
+              <rect x="6" y="104" width="136" height="64" rx="5" fill="var(--card)" stroke="var(--line)" stroke-width="2"/>
+              <text class="serifsvg" x="74" y="130" font-size="16" font-weight="700" fill="var(--ink)" text-anchor="middle">A decision</text>
+              <text class="serifsvg" x="74" y="150" font-size="16" font-weight="700" fill="var(--ink)" text-anchor="middle">needs data</text>
+              <line x1="146" y1="136" x2="184" y2="136" stroke="var(--muted)" stroke-width="2.5" marker-end="url(#m6)"/>
+            </g>
+
+            <g data-step="2">
+              <rect x="190" y="96" width="140" height="80" rx="5" fill="var(--card)" stroke="var(--ochre)" stroke-width="3"/>
+              <text class="serifsvg" x="260" y="142" font-size="18" font-weight="700" fill="var(--ink)" text-anchor="middle">Stakes?</text>
+            </g>
+
+            <g data-step="3">
+              <path d="M334 118 H380 V62" fill="none" stroke="var(--muted)" stroke-width="2.5" marker-end="url(#m6)"/>
+              <text x="408" y="50" font-size="10.5" fill="var(--muted)">LOW STAKES</text>
+              <rect x="380" y="16" width="514" height="86" rx="5" fill="var(--secondary)" stroke="var(--line)" stroke-width="2"/>
+              <text class="serifsvg" x="402" y="76" font-size="19" font-weight="700" fill="var(--ink)">The function serves itself, on the agentic product</text>
+              <text x="402" y="96" font-size="11" fill="var(--muted)">recurring "what happened" · standard slices · first-pass diagnosis</text>
+            </g>
+
+            <g data-step="4">
+              <path d="M334 154 H380 V208" fill="none" stroke="var(--pine)" stroke-width="2.5" marker-end="url(#m6p)"/>
+              <text x="408" y="176" font-size="10.5" fill="var(--pine)">HIGH STAKES</text>
+              <rect x="380" y="168" width="514" height="86" rx="5" fill="var(--mint)" stroke="var(--pine)" stroke-width="2.5"/>
+              <text class="serifsvg" x="402" y="212" font-size="19" font-weight="700" fill="var(--ink)">Stays with us</text>
+              <text x="402" y="234" font-size="11" fill="var(--muted)">one-way doors · board packs and regulators · contested definitions</text>
+            </g>
+
+            <g data-step="5">
+              <rect x="6" y="268" width="888" height="30" rx="4" fill="var(--pine)"/>
+              <text x="450" y="288" font-size="11.5" fill="var(--mint)" text-anchor="middle" letter-spacing="1.6">BOTH PATHS RUN ON THE SAME SEMANTIC + CONTEXT LAYER</text>
+            </g>
+          </svg>
+        </div>
+      </div>`,
+    notes: `<b>This is now the first operating choice in Part 2.</b> The previous slide says the mission and mandate are changing; this one makes that concrete. The team stops maximising the number of questions it answers and starts routing work according to stakes.<br><br>
+      <b>If you use the centralised-versus-embedded show of hands, do it here.</b> Word it as a tension, not a survey: <em>"Hands up if your analysts sit inside business functions. Now — hands up if they're pooled centrally."</em> Then: <em>"Whichever model you run, the question is the same: what should still need the team?"</em><br><br>
+      <b>The key call is deliberately simple:</b> high-stakes decisions — one-way doors, board packs and regulators, contested definitions — stay with the data team. Low-stakes, recurring questions go to the function on the agentic product. Say it exactly that plainly.<br><br>
+      The green bar is the callback to Part 1 and the permission slip for this shift: it isn't two systems with two versions of the truth. It is one substrate with two routes. That takes you directly into the capacity-mix slide.`
   });
 
   /* ───────────────────── CAPACITY MIX (new) ───────────────────── */
