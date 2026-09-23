@@ -933,66 +933,12 @@
       For this audience the framing on the first three is still: these aren't three career paths for students, they're <em>hiring bars and job architectures you have to build</em>. Say that explicitly.<br><br>
       <b>On box four, this is where the "closest proxy for forward-deployed engineers" argument lives — say it as the category, not as a complaint about your own engineering org:</b> "Forward-deployed engineering is a Silicon Valley luxury — it assumes a surplus of senior engineers most companies never have to spare." Then, if the room is warm, a rhetorical question rather than a literal show of hands (you've already done two): "Could you even name someone embedded like that in your own marketing team?" Sparse nodding makes the point for you.<br><br>
       <b>Define the term once, here, for the room:</b> a forward-deployed engineer sits inside a business function long enough to actually ship its software, rather than serving it from a central team. Most of this room won't have the Palantir-era connotation; give them the plain version before you rely on it for two more slides.<br><br>
+      <b>Promise one proof point for later:</b> when you name data product management, say: <em>"I'll show you a product one of our analysts built at the end."</em> Then keep moving.<br><br>
       Fast — under 90 seconds total. Let the four roles stand on their own, then use the fourth as the spoken pivot into the next slide.<br><br>
       Credit where it's due if it comes up: "Analytics Intelligence Engineering" as a term is Hamzah Chaudhary's.`
   });
 
-  /* ───────────────────── 16 · DATA PRODUCT MANAGEMENT SHOWCASE ───────────────────── */
-  S.push({
-    act: "Part 2", wp: "Data product management in practice", title: "AI-assisted lead generation", min: 1.5,
-    html: `
-      <div class="stack" style="gap:12px">
-        <div class="lbl">02 &nbsp;·&nbsp; data product management in practice</div>
-        <h2 style="font-size:34px;line-height:1.04">A data analyst turned search demand into sales-ready leads.</h2>
-        <p style="font-size:17px;margin:0;color:var(--muted)">One owned workflow, from unmet customer demand to validated, location-enriched opportunities.</p>
-        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:5px">
-          <div data-step="1" style="background:var(--secondary);border-top:4px solid var(--ochre);padding:14px 12px;min-height:276px">
-            <div class="lbl ochre">01 · Detect</div>
-            <div class="stmt" style="font-size:18px;margin-top:10px">Find unmet demand</div>
-            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Extract high-demand restaurant searches by delivery zone.</p>
-            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Top search terms</div>
-          </div>
-          <div data-step="1" style="background:var(--secondary);border-top:4px solid var(--ochre);padding:14px 12px;min-height:276px">
-            <div class="lbl ochre">02 · Verify</div>
-            <div class="stmt" style="font-size:18px;margin-top:10px">Check internal records</div>
-            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Match search terms against Salesforce accounts and leads.</p>
-            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Exact and fuzzy matching</div>
-          </div>
-          <div data-step="1" style="background:var(--secondary);border-top:4px solid var(--ochre);padding:14px 12px;min-height:276px">
-            <div class="lbl ochre">03 · Classify</div>
-            <div class="stmt" style="font-size:18px;margin-top:10px">Decide what proceeds</div>
-            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Separate known merchants, new opportunities and unclear matches.</p>
-            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Known · new · ambiguous</div>
-          </div>
-          <div data-step="2" style="background:var(--mint);border-top:4px solid var(--pine);padding:14px 12px;min-height:276px">
-            <div class="lbl pine">04 · Validate</div>
-            <div class="stmt" style="font-size:18px;margin-top:10px">Resolve with AI</div>
-            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Resolve ambiguous matches and confirm that the restaurant exists.</p>
-            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">External public search</div>
-          </div>
-          <div data-step="2" style="background:var(--mint);border-top:4px solid var(--pine);padding:14px 12px;min-height:276px">
-            <div class="lbl pine">05 · Enrich</div>
-            <div class="stmt" style="font-size:18px;margin-top:10px">Add location context</div>
-            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Add address, contact details, category, ratings and geo-context.</p>
-            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Location-enriched lead</div>
-          </div>
-          <div data-step="2" style="background:var(--mint);border-top:4px solid var(--pine);padding:14px 12px;min-height:276px">
-            <div class="lbl pine">06 · Deliver</div>
-            <div class="stmt" style="font-size:18px;margin-top:10px">Create sales-ready output</div>
-            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Prioritize validated leads for outreach and conversion.</p>
-            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Owned business outcome</div>
-          </div>
-        </div>
-        <div data-step="3" style="border-left:4px solid var(--pine);padding:10px 16px;font-size:17px;line-height:1.4"><b class="pine">This is data product management:</b> owning the path from an unmet need to an outcome someone can use.</div>
-      </div>`,
-    notes: `<b>This is a real product built by a data analyst on your team.</b> It is the concrete answer to the previous slide's "data product management" box. Do not present it as a six-step architecture review; present it as ownership of the entire user problem.<br><br>
-      <b>First click: the data work.</b> Search data reveals high-demand named restaurants missing from the network. The product checks Salesforce using exact and fuzzy matching, then classifies each term as a known merchant, a new opportunity or an ambiguous match.<br><br>
-      <b>Second click: the product work.</b> AI resolves ambiguous matches and validates restaurant existence through public search. The workflow then enriches each lead with location and contact context before delivering a prioritized list ready for sales outreach.<br><br>
-      <b>Third click is the point.</b> The analyst did not stop at a dashboard showing search demand. They designed the validation logic, joined internal and external context, and delivered a repeatable output into a real operating workflow. That is the higher bar you mean by data product management.<br><br>
-      Keep this to 90 seconds. Pick one design choice to discuss if the room is interested; do not narrate every box.`
-  });
-
-  /* ───────────────────── 17 · THE LEADER'S JOB (closes Part 2) ───────────────────── */
+  /* ───────────────────── 16 · THE LEADER'S JOB (closes Part 2) ───────────────────── */
   S.push({
     act: "Part 2", wp: "Demonstration, not sponsorship", title: "The leader's job", min: 1.5,
     html: `
@@ -1120,10 +1066,65 @@
       <b>"One more arrow in the quiver" is the line to land, not "we run their AI for them."</b> You're not claiming ownership of their functions — you're saying the data team is now a resource each of them can point at their own AI mandate, the way they'd point at a specific tool.<br><br>
       <b>Second click is the payoff.</b> The data team already has people who combine functional context with the ability to build. Moving them closer to these workflows gives each function a practical builder layer. They are not taking over each function's AI mandate; they are helping each function turn that mandate into working software.<br><br>
       <b>The use cases are illustrative.</b> Pick whichever one is most real for your organisation right now; a single concrete example beats reading all eight.<br><br>
-      <b>Close on the pine bar and stop.</b> Say: <em>"That is where I think data teams go next."</em> Then advance to Q&amp;A.`
+      <b>Close on the pine bar and stop.</b> Say: <em>"That is the claim. Let me show you one product an analyst on our team actually built."</em> Then advance to the proof point.`
   });
 
-  /* ───────────────────── 20 · Q&A ───────────────────── */
+  /* ───────────────────── 20 · BUILDER LAYER SHOWCASE ───────────────────── */
+  S.push({
+    act: "Part 3 &nbsp;·&nbsp; Transforming the enterprise", wp: "The builder layer in practice", title: "AI-assisted lead generation", min: 1.5,
+    html: `
+      <div class="stack" style="gap:12px">
+        <div class="lbl">03 &nbsp;·&nbsp; the builder layer in practice</div>
+        <h2 style="font-size:34px;line-height:1.04">A data analyst turned search demand into sales-ready leads.</h2>
+        <p style="font-size:17px;margin:0;color:var(--muted)">One owned workflow, from unmet customer demand to validated, location-enriched opportunities.</p>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:5px">
+          <div data-step="1" style="background:var(--secondary);border-top:4px solid var(--ochre);padding:14px 12px;min-height:276px">
+            <div class="lbl ochre">01 · Detect</div>
+            <div class="stmt" style="font-size:18px;margin-top:10px">Find unmet demand</div>
+            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Extract high-demand restaurant searches by delivery zone.</p>
+            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Top search terms</div>
+          </div>
+          <div data-step="1" style="background:var(--secondary);border-top:4px solid var(--ochre);padding:14px 12px;min-height:276px">
+            <div class="lbl ochre">02 · Verify</div>
+            <div class="stmt" style="font-size:18px;margin-top:10px">Check internal records</div>
+            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Match search terms against Salesforce accounts and leads.</p>
+            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Exact and fuzzy matching</div>
+          </div>
+          <div data-step="1" style="background:var(--secondary);border-top:4px solid var(--ochre);padding:14px 12px;min-height:276px">
+            <div class="lbl ochre">03 · Classify</div>
+            <div class="stmt" style="font-size:18px;margin-top:10px">Decide what proceeds</div>
+            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Separate known merchants, new opportunities and unclear matches.</p>
+            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Known · new · ambiguous</div>
+          </div>
+          <div data-step="2" style="background:var(--mint);border-top:4px solid var(--pine);padding:14px 12px;min-height:276px">
+            <div class="lbl pine">04 · Validate</div>
+            <div class="stmt" style="font-size:18px;margin-top:10px">Resolve with AI</div>
+            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Resolve ambiguous matches and confirm that the restaurant exists.</p>
+            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">External public search</div>
+          </div>
+          <div data-step="2" style="background:var(--mint);border-top:4px solid var(--pine);padding:14px 12px;min-height:276px">
+            <div class="lbl pine">05 · Enrich</div>
+            <div class="stmt" style="font-size:18px;margin-top:10px">Add location context</div>
+            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Add address, contact details, category, ratings and geo-context.</p>
+            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Location-enriched lead</div>
+          </div>
+          <div data-step="2" style="background:var(--mint);border-top:4px solid var(--pine);padding:14px 12px;min-height:276px">
+            <div class="lbl pine">06 · Deliver</div>
+            <div class="stmt" style="font-size:18px;margin-top:10px">Create sales-ready output</div>
+            <p style="font-size:13.5px;line-height:1.42;margin-top:10px">Prioritize validated leads for outreach and conversion.</p>
+            <div style="border-top:1px solid var(--line);margin-top:17px;padding-top:10px;font-size:12.5px;color:var(--muted)">Owned business outcome</div>
+          </div>
+        </div>
+        <div data-step="3" style="border-left:4px solid var(--pine);padding:10px 16px;font-size:17px;line-height:1.4"><b class="pine">This is the builder layer in practice:</b> close to the problem and able to ship the full workflow.</div>
+      </div>`,
+    notes: `<b>This is a real product built by a data analyst on your team.</b> It is the concrete proof behind the previous slide's builder-layer claim, and it pays off the data-product-management promise from Part 2. Do not present it as a six-step architecture review; present it as ownership of the entire user problem.<br><br>
+      <b>First click: the data work.</b> Search data reveals high-demand named restaurants missing from the network. The product checks Salesforce using exact and fuzzy matching, then classifies each term as a known merchant, a new opportunity or an ambiguous match.<br><br>
+      <b>Second click: the product work.</b> AI resolves ambiguous matches and validates restaurant existence through public search. The workflow then enriches each lead with location and contact context before delivering a prioritized list ready for sales outreach.<br><br>
+      <b>Third click is the point.</b> The analyst did not stop at a dashboard showing search demand. They designed the validation logic, joined internal and external context, and delivered a repeatable output into a real operating workflow. That is both data product management and forward-deployed building in practice.<br><br>
+      Keep this to 90 seconds. Pick one design choice to discuss if the room is interested; do not narrate every box. Then advance directly to Q&amp;A.`
+  });
+
+  /* ───────────────────── 21 · Q&A ───────────────────── */
   S.push({
     act: "Q&amp;A", wp: "Open discussion", title: "Questions", min: 10,
     html: `
