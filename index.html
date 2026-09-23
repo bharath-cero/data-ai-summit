@@ -520,29 +520,25 @@
   S.push({
     act: "Open", wp: "Where we're headed", title: "The map", min: 0.5,
     html: `
-      <div class="stack" style="gap:20px">
-        <div class="lbl" style="font-size:22px;letter-spacing:.14em">Agenda</div>
-        <div class="stack sm" style="gap:18px">
-          <div style="border-top:4px solid var(--pine);padding-top:12px">
-            <div class="lbl">01</div>
-            <div class="stmt" style="font-size:23px;margin-top:11px">Transforming the data platform</div>
-            <p style="font-size:15.5px;line-height:1.42;margin-top:9px">The platform, the loop, and where we drew the line.</p>
+      <div class="stack" style="gap:18px">
+        <h2 style="font-size:46px;line-height:1">Agenda</h2>
+        <div style="display:grid;gap:14px">
+          <div data-step="1" style="display:grid;grid-template-columns:80px 1fr;align-items:center;min-height:94px;padding:17px 24px;background:var(--mint);border-left:6px solid var(--pine);border-radius:6px">
+            <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:26px;color:var(--pine);letter-spacing:.08em">01</div>
+            <div class="stmt" style="font-size:32px">Transforming the data platform</div>
           </div>
-          <div style="border-top:4px solid var(--ochre);padding-top:12px">
-            <div class="lbl">02</div>
-            <div class="stmt" style="font-size:23px;margin-top:11px">Transforming the data team</div>
-            <p style="font-size:15.5px;line-height:1.42;margin-top:9px">A narrower mandate, new roles, and what leading it looks like.</p>
+          <div data-step="2" style="display:grid;grid-template-columns:80px 1fr;align-items:center;min-height:94px;padding:17px 24px;background:#F5EAE0;border-left:6px solid var(--ochre);border-radius:6px">
+            <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:26px;color:var(--ochre);letter-spacing:.08em">02</div>
+            <div class="stmt" style="font-size:32px">Transforming the data team</div>
           </div>
-          <div style="border-top:4px solid var(--brick);padding-top:12px">
-            <div class="lbl">03</div>
-            <div class="stmt" style="font-size:23px;margin-top:11px">Transforming the enterprise</div>
-            <p style="font-size:15.5px;line-height:1.42;margin-top:9px">The functional AI white space, up for grabs.</p>
+          <div data-step="3" style="display:grid;grid-template-columns:80px 1fr;align-items:center;min-height:94px;padding:17px 24px;background:#F6E9E8;border-left:6px solid var(--brick);border-radius:6px">
+            <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:26px;color:var(--brick);letter-spacing:.08em">03</div>
+            <div class="stmt" style="font-size:32px">Transforming the enterprise</div>
           </div>
         </div>
       </div>`,
-    notes: `<b>Font sizes now match the deck's standard numbered-list pattern exactly</b> (same stmt/p sizes as "Three things, and Monday") — number stacked above title above description, rather than inline on one baseline. The inline version was mixing an 11.5px number with a 24px title on the same row, which is what read as misaligned.<br><br>
-      Say the header, then the three lines fast — ten seconds, no more, top to bottom.<br><br>
-      <b>Dropped "substrate" from this slide</b> — replaced with "platform" in the first line's description. It's still the term used for the semantic + context layer elsewhere in the deck (Part 1's own vocabulary), so leave that alone unless you want a pass through the whole thing — this fix was scoped to just this slide.<br><br>
+    notes: `<b>This is deliberately just the map.</b> The descriptions are gone; large section names and the recurring 01/02/03 colours do all the work.<br><br>
+      Say the header, then the three lines fast — ten seconds, no more, top to bottom. Advance once per section name if you want the room to track your pacing.<br><br>
       <b>These three numbers (01/02/03) are the breadcrumb for the rest of the talk</b> — every slide's top-left corner carries the matching number, so the room can always place itself. Point at this slide again only if you badly lose the room; otherwise the corner tag is doing that job silently.`
   });
 
