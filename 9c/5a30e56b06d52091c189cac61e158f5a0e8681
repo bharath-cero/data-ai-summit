@@ -1,0 +1,19 @@
+index.html
+  s_940bbc0044a4d1::t_d3a2c0de5b24ad 757
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "9c5a30e56b06d52091c189cac61e158f5a0e8681",
+  "prompts": {},
+  "sessions": {
+    "s_940bbc0044a4d1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0cc86-c66d-7032-80b4-e8e7752dbf60",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "bharath-cero <bharath-cero@users.noreply.github.com>"
+    }
+  }
+}
