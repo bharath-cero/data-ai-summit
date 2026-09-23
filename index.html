@@ -1128,11 +1128,15 @@
   S.push({
     act: "Q&amp;A", wp: "Open discussion", title: "Questions", min: 10,
     html: `
-      <div style="height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+      <div style="position:relative;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
         <div class="lbl pine" style="font-size:15px">Q&amp;A</div>
         <h1 style="font-size:96px;line-height:.95;margin-top:20px">Questions?</h1>
         <div style="width:130px;height:5px;background:var(--pine);border-radius:3px;margin-top:28px"></div>
         <p style="font-size:22px;color:var(--muted);margin-top:22px">Where do data teams go from here?</p>
+        <div style="position:absolute;right:0;bottom:0;width:150px;text-align:center">
+          <div class="lbl pine" style="font-size:11px;margin-bottom:8px">Further reading</div>
+          <img src="assets/ai-transformation-article-qr.png" alt="QR code linking to further reading on AI transformation" style="display:block;width:136px;height:136px;object-fit:contain;background:#fff;border:1px solid var(--line);padding:7px;margin-left:auto"/>
+        </div>
       </div>`,
     notes: `<b>Hold this slide throughout Q&amp;A.</b> Open with: <em>"I've got ten minutes. What do you disagree with?"</em> Then wait. Do not fill the silence.<br><br>
       <b>Three pre-written Q&amp;A boundaries — say them out loud twice tonight.</b><br>
