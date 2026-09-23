@@ -211,7 +211,6 @@
   @keyframes m-spin  { to { transform: rotate(360deg); } }
   @keyframes m-popx  { 0%, 15% { opacity: 0; transform: scale(.3); } 30%, 100% { opacity: 1; transform: scale(1); } }
   @keyframes m-tumble{ 0% { transform: translateY(0) rotate(0); } 60% { transform: translateY(20px) rotate(35deg); } 100% { transform: translateY(20px) rotate(28deg); } }
-  @keyframes m-nod   { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(7deg); } }
   .m-raise-l1 { transform-origin: 26px 59px; animation: m-raise-l 4.4s cubic-bezier(.34,1.28,.64,1) infinite; }
   .m-raise-r2 { transform-origin: 102px 51px; animation: m-raise-r 4.4s cubic-bezier(.34,1.28,.64,1) .32s infinite; }
   .m-raise-r3 { transform-origin: 154px 59px; animation: m-raise-r 4.4s cubic-bezier(.34,1.28,.64,1) .64s infinite; }
@@ -226,12 +225,9 @@
   .m-pop2  { animation: m-popx 2.4s ease-out infinite .5s; }
   .m-pop3  { animation: m-popx 2.4s ease-out infinite 1s; }
   .m-tumble{ transform-origin: 50% 30%; animation: m-tumble 1.6s cubic-bezier(.36,0,.66,-0.3) infinite; }
-  .m-nod1  { transform-origin: 50% 80%; animation: m-nod 1.4s ease-in-out infinite; }
-  .m-nod2  { transform-origin: 50% 80%; animation: m-nod 1.4s ease-in-out infinite .3s; }
-  .m-nod3  { transform-origin: 50% 80%; animation: m-nod 1.4s ease-in-out infinite .6s; }
   @media (prefers-reduced-motion: reduce) {
     .m-raise-l1, .m-raise-r2, .m-raise-r3, .m-sweat-c, .m-signal-1, .m-signal-2, .m-signal-3,
-    .m-spin, .m-pop1, .m-pop2, .m-pop3, .m-tumble, .m-nod1, .m-nod2, .m-nod3 { animation: none !important; }
+    .m-spin, .m-pop1, .m-pop2, .m-pop3, .m-tumble { animation: none !important; }
   }
 
   /* screenshot placeholder */
@@ -943,58 +939,26 @@
 
   /* ───────────────────── 17 · THE LEADER'S JOB (closes Part 2) ───────────────────── */
   S.push({
-    act: "Part 2", wp: "Demonstration, not sponsorship", title: "The leader's job", min: 1.75,
+    act: "Part 2", wp: "Demonstration, not sponsorship", title: "The leader's job", min: 1.5,
     html: `
-      <div class="stack" style="gap:16px">
+      <div class="stack" style="gap:0;height:100%;justify-content:space-between">
         <div class="lbl">02 &nbsp;·&nbsp; the leader's job</div>
-        <div class="row mid" style="gap:26px" data-step="1">
-          <div class="stmt" style="flex:1;font-size:30px;border-left:4px solid var(--pine);padding-left:22px">"You can't govern a technology<br>you only get briefed on."</div>
-          <div class="motif" style="flex:0 0 206px;min-height:106px">
-            <svg viewBox="0 0 72 72" role="img" aria-label="Three heads nodding around a closed folder nobody has opened">
-              <circle class="m-nod1" cx="16" cy="20" r="8" fill="none" stroke="var(--ink)" stroke-width="3"/>
-              <circle class="m-nod2" cx="36" cy="14" r="8" fill="none" stroke="var(--ink)" stroke-width="3"/>
-              <circle class="m-nod3" cx="56" cy="20" r="8" fill="none" stroke="var(--ink)" stroke-width="3"/>
-              <rect x="24" y="46" width="24" height="16" rx="2" fill="none" stroke="var(--ochre)" stroke-width="3"/>
-              <line x1="24" y1="52" x2="48" y2="52" stroke="var(--ochre)" stroke-width="2"/>
-            </svg>
-            <div class="cap">briefed, not opened</div>
+        <div style="max-width:980px;margin-top:34px">
+          <div class="stmt" style="font-size:43px;line-height:1.12;border-left:5px solid var(--pine);padding-left:28px">&ldquo;You can't govern a technology<br>you only get briefed on.&rdquo;</div>
+          <div style="margin:22px 0 0 33px">
+            <div class="lbl pine" style="font-size:14px">Dr Vivian Balakrishnan</div>
+            <div style="font-size:17px;color:var(--muted);margin-top:6px">Minister for Foreign Affairs, Singapore</div>
           </div>
         </div>
-        <div style="width:100%">
-          <svg class="fig" viewBox="0 0 900 196" role="img" aria-label="Four levels of leader engagement — briefed, demoed, used, built — with a decision line falling between demoed and used">
-            <g data-step="2">
-              <rect x="6" y="38" width="206" height="76" rx="5" fill="var(--secondary)" stroke="var(--line)" stroke-width="2"/>
-              <text class="serifsvg" x="109" y="72" font-size="19" font-weight="700" fill="var(--muted)" text-anchor="middle">Briefed</text>
-              <text x="109" y="94" font-size="11" fill="var(--muted)" text-anchor="middle">you read the summary</text>
-              <rect x="222" y="38" width="206" height="76" rx="5" fill="var(--secondary)" stroke="var(--line)" stroke-width="2"/>
-              <text class="serifsvg" x="325" y="72" font-size="19" font-weight="700" fill="var(--muted)" text-anchor="middle">Demoed</text>
-              <text x="325" y="94" font-size="11" fill="var(--muted)" text-anchor="middle">someone showed you</text>
-            </g>
-            <g data-step="3">
-              <rect x="472" y="38" width="206" height="76" rx="5" fill="var(--card)" stroke="var(--pine)" stroke-width="2.5"/>
-              <text class="serifsvg" x="575" y="72" font-size="19" font-weight="700" fill="var(--ink)" text-anchor="middle">Used</text>
-              <text x="575" y="94" font-size="11" fill="var(--muted)" text-anchor="middle">it is in your own week</text>
-              <rect x="688" y="38" width="206" height="76" rx="5" fill="var(--mint)" stroke="var(--pine)" stroke-width="3"/>
-              <text class="serifsvg" x="791" y="72" font-size="19" font-weight="700" fill="var(--ink)" text-anchor="middle">Built</text>
-              <text x="791" y="94" font-size="11" fill="var(--muted)" text-anchor="middle">you shipped one yourself</text>
-            </g>
-            <g data-step="4">
-              <line x1="450" y1="12" x2="450" y2="148" stroke="var(--brick)" stroke-width="2.5" stroke-dasharray="7 5"/>
-              <text x="442" y="24" font-size="10.5" fill="var(--brick)" text-anchor="end" letter-spacing="1.4">THE DECISION LINE</text>
-              <text x="214" y="138" font-size="11.5" fill="var(--brick)" text-anchor="end">you are approving on trust</text>
-              <text x="686" y="138" font-size="11.5" fill="var(--pine)" text-anchor="start">you can specify the work</text>
-              <text class="serifsvg" x="450" y="182" font-size="19" font-weight="700" fill="var(--ink)" text-anchor="middle">Where are you on this line? Where are your peers?</text>
-            </g>
-          </svg>
+        <div style="border-top:1px solid var(--line);padding-top:24px;margin-top:auto">
+          <div class="stmt pine" style="font-size:35px;line-height:1.2">Data leaders have to become AI leaders.</div>
+          <div class="stmt" style="font-size:27px;line-height:1.25;margin-top:8px">By demonstration, not by sponsorship.</div>
         </div>
-        <div class="stmt pine" data-step="5" style="font-size:28px">Data leaders have to become AI leaders. By demonstration, not by sponsorship.</div>
       </div>`,
-    notes: `<b>Open this with the scene, not the quote.</b> The talk needs one moment with a person in it, and this is it — told admiringly about someone else, which is worth more than any abstract claim about leadership.<br><br>
-      <em>The scene:</em> a senior Singapore minister opening his laptop in front of a room and walking through the agentic setup he actually uses for his own diplomatic work. Not a slide about AI policy — his own tooling. Set it up in three sentences: where you were, what you expected him to present, what he presented instead. <b>Then</b> the quote lands as the conclusion of a story rather than a pull-quote.<br><br>
-      <em>Then turn it on yourself as demonstration, not confession.</em> One concrete thing <b>you personally</b> built or use weekly — the agent you run, the workflow you wired, the thing in your own week. Thirty seconds. That's the flex, and it's the entire argument: you are asking this room to do something you have already done.<br><br>
-      <b>The diagram is the challenge.</b> Most of the leaders in that room are sitting at Briefed or Demoed and know it. Don't ask for hands — let them place themselves silently. Then ask about their peers, which is the harder and more useful question, because their peers are the function heads who have to sponsor the work.<br><br>
-      <b>This closes Part 2 on the personal note, not the org note.</b> Land "by demonstration, not by sponsorship" and stop — don't reach for the CoE or the enterprise argument here, that's the next slide's job, and naming it now steals its own thunder.<br><br>
-      <b>Your hinge line into Part 3, spoken, not on a slide:</b> <em>"None of this happens because a data team wants it to. It happened because I was willing to spend my own political capital on it. And that same capital is what lets the team go further than its own function."</em> Stronger than the governance version, removes any reading of it as commentary on the CEO transition, and walks you straight into the enterprise argument next — where the CoE mandate gets named properly, as evidence you hold the pen.`
+    notes: `<b>Open with why this lands in Singapore.</b> Dr Vivian Balakrishnan, Singapore's Minister for Foreign Affairs, opened his laptop in front of a room and walked through the agentic setup he uses for his own diplomatic work. Set up where you were, what you expected him to present, and what he presented instead. Then let his quote land.<br><br>
+      <em>Turn it on yourself through one concrete example.</em> Name something you personally built or use every week. Keep it to thirty seconds. The point is simple: you are asking the room to do something you have already done.<br><br>
+      <b>Close on the final two lines and stop.</b> "Data leaders have to become AI leaders. By demonstration, not by sponsorship." Let the statement carry the transition.<br><br>
+      <b>Your hinge line into Part 3, spoken:</b> <em>"None of this happens because a data team wants it to. It happened because I was willing to spend my own political capital on it. And that same capital is what lets the team go further than its own function."</em>`
   });
 
   /* ───────────────────── TRANSFORMING THE ENTERPRISE (new — all of Part 3) ───────────────────── */
