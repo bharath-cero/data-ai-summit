@@ -856,53 +856,50 @@
   S.push({
     act: "Part 2", wp: "The capacity shift", title: "Capacity mix, before and after", min: 1,
     html: `
-      <div class="stack" style="gap:20px">
+      <div class="stack" style="gap:15px">
         <div class="lbl">02 &nbsp;·&nbsp; where the team's time goes</div>
         <h2 style="font-size:36px">Same team. A different mix of what it spends time on.</h2>
-        <div class="row" style="gap:40px;align-items:flex-start">
-          <div style="flex:1.3" class="stack sm">
-            <div>
-              <div class="lbl" style="margin-bottom:6px">Dashboards and Decision Support</div>
-              <div style="display:flex;gap:8px;align-items:center">
-                <div style="flex:78;height:16px;border-radius:8px;background:var(--secondary);border:1px solid var(--line)"></div>
-                <div style="flex:22;height:16px;border-radius:8px;background:var(--brick)"></div>
-              </div>
+        <div class="panel" style="padding:15px 20px 14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div class="lbl">Illustrative capacity mix</div>
+            <div class="lbl" style="color:var(--muted);letter-spacing:.1em">same total team capacity</div>
+          </div>
+          <div style="display:grid;grid-template-columns:86px 1fr;gap:10px 14px;align-items:center">
+            <div class="lbl brick" data-step="1" style="font-size:12px">Today</div>
+            <div data-step="1" style="height:48px;display:flex;gap:3px;overflow:hidden;border-radius:5px;background:var(--secondary)">
+              <div style="flex:52;background:var(--brick)" title="Dashboards and decision support"></div>
+              <div style="flex:24;background:var(--ochre)" title="Analytics engineering"></div>
+              <div style="flex:18;background:var(--pine-mid)" title="Advanced analytics and decision review"></div>
+              <div style="flex:6;background:var(--pine)" title="Data product management"></div>
             </div>
-            <div>
-              <div class="lbl" style="margin-bottom:6px">Analytics engineering</div>
-              <div style="display:flex;gap:8px;align-items:center">
-                <div style="flex:30;height:16px;border-radius:8px;background:var(--secondary);border:1px solid var(--line)"></div>
-                <div style="flex:68;height:16px;border-radius:8px;background:var(--pine)"></div>
-              </div>
+            <div></div>
+            <div data-step="2" style="display:flex;align-items:center;gap:10px;color:var(--muted)">
+              <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:19px;color:var(--pine)">↓</span>
+              <span class="lbl" style="letter-spacing:.08em">capacity moves from recurring reporting into build, product and decision work</span>
             </div>
-            <div>
-              <div class="lbl" style="margin-bottom:6px">Advanced analytics &amp; decision review</div>
-              <div style="display:flex;gap:8px;align-items:center">
-                <div style="flex:42;height:16px;border-radius:8px;background:var(--secondary);border:1px solid var(--line)"></div>
-                <div style="flex:74;height:16px;border-radius:8px;background:var(--pine)"></div>
-              </div>
-            </div>
-            <div>
-              <div class="lbl" style="margin-bottom:6px">Data product management</div>
-              <div style="display:flex;gap:8px;align-items:center">
-                <div style="flex:18;height:16px;border-radius:8px;background:var(--secondary);border:1px solid var(--line)"></div>
-                <div style="flex:55;height:16px;border-radius:8px;background:var(--pine)"></div>
-              </div>
-            </div>
-            <div style="display:flex;gap:16px;margin-top:4px">
-              <div style="display:flex;align-items:center;gap:6px"><span style="width:11px;height:11px;border-radius:3px;background:var(--secondary);border:1px solid var(--line);display:inline-block"></span><span class="lbl" style="letter-spacing:.08em">today</span></div>
-              <div style="display:flex;align-items:center;gap:6px"><span style="width:11px;height:11px;border-radius:3px;background:var(--pine);display:inline-block"></span><span class="lbl" style="letter-spacing:.08em">target</span></div>
+            <div class="lbl pine" data-step="2" style="font-size:12px">Target</div>
+            <div data-step="2" style="height:48px;display:flex;gap:3px;overflow:hidden;border-radius:5px;background:var(--secondary)">
+              <div style="flex:20;background:var(--brick)" title="Dashboards and decision support"></div>
+              <div style="flex:30;background:var(--ochre)" title="Analytics engineering"></div>
+              <div style="flex:28;background:var(--pine-mid)" title="Advanced analytics and decision review"></div>
+              <div style="flex:22;background:var(--pine)" title="Data product management"></div>
             </div>
           </div>
-          <div style="flex:1" class="stack sm">
-            <div class="note"><div class="h">Reduce</div><div class="b">Capacity spent on low-leverage, recurring "what happened" work &mdash; the agentic product now serves that on its own.</div></div>
-            <div class="note" style="border-left-color:var(--pine)"><div class="h">Increase</div><div class="b">Capacity spent on thought partnership with functions, and overseeing the decisions that actually carry stakes.</div></div>
+          <div style="display:grid;grid-template-columns:1.5fr 1fr 1.45fr 1.2fr;gap:12px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)">
+            <div style="display:flex;align-items:flex-start;gap:7px"><span style="width:11px;height:11px;margin-top:2px;border-radius:2px;background:var(--brick);flex:none"></span><span class="lbl" style="font-size:10.5px;letter-spacing:.06em">Dashboards &amp;<br>decision support</span></div>
+            <div style="display:flex;align-items:flex-start;gap:7px"><span style="width:11px;height:11px;margin-top:2px;border-radius:2px;background:var(--ochre);flex:none"></span><span class="lbl" style="font-size:10.5px;letter-spacing:.06em">Analytics<br>engineering</span></div>
+            <div style="display:flex;align-items:flex-start;gap:7px"><span style="width:11px;height:11px;margin-top:2px;border-radius:2px;background:var(--pine-mid);flex:none"></span><span class="lbl" style="font-size:10.5px;letter-spacing:.06em">Advanced analytics<br>&amp; decision review</span></div>
+            <div style="display:flex;align-items:flex-start;gap:7px"><span style="width:11px;height:11px;margin-top:2px;border-radius:2px;background:var(--pine);flex:none"></span><span class="lbl" style="font-size:10.5px;letter-spacing:.06em">Data product<br>management</span></div>
           </div>
         </div>
+        <div data-step="3" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="note" style="border-left-color:var(--brick);padding:11px 16px"><div class="h" style="color:var(--brick)">Less</div><div class="b">Recurring "what happened" work served by the agentic product.</div></div>
+          <div class="note" style="border-left-color:var(--pine);padding:11px 16px"><div class="h" style="color:var(--pine)">More</div><div class="b">Building, thought partnership and review of decisions that carry stakes.</div></div>
+        </div>
       </div>`,
-    notes: `<b>Deliberately no headcount number on this slide, and no word implying the team shrinks. Say that part out loud instead.</b> The bars alone carry the redistribution argument; the room does not need it printed under a photo they'll take.<br><br>
+    notes: `<b>Two 100% bars make the actual claim visible: the pool stays fixed while the work inside it changes.</b> Deliberately no headcount number on this slide, and no word implying the team shrinks. Say that part out loud instead.<br><br>
       <b>What you say, roughly:</b> "We're being asked to do this with less than more of us. The only honest way to do that is to stop spending capacity on the recurring, low-leverage work an agent now handles, and put it into the work only a person can do." That's the "narrower mandate" argument from Part 1, now landing on the team itself.<br><br>
-      <b>Bar values are illustrative</b> &mdash; swap the flex numbers for your real current-vs-target mix if you have it before you present; the shape of the argument doesn't depend on the exact split.<br><br>
+      <b>The mix is explicitly illustrative</b> &mdash; swap the segment proportions for your real current-vs-target mix if you have it before you present. Until then, the visual is directional rather than a claimed measurement.<br><br>
       Keep this under a minute. It's a mood-setting slide, not a data table.`
   });
 
