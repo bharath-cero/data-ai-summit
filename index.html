@@ -204,14 +204,23 @@
     font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9.5px;
     letter-spacing: .1em; text-transform: uppercase; color: var(--muted); text-align: center;
   }
-  @keyframes m-sway  { 0%,100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
-  @keyframes m-drip  { 0% { transform: translateY(0); opacity: 1; } 75% { opacity: .15; } 100% { transform: translateY(16px); opacity: 0; } }
+  @keyframes m-raise-r { 0%, 12%, 92%, 100% { transform: rotate(0); } 28%, 78% { transform: rotate(-105deg); } }
+  @keyframes m-raise-l { 0%, 12%, 92%, 100% { transform: rotate(0); } 28%, 78% { transform: rotate(105deg); } }
+  @keyframes m-sweat-pop { 0%, 32% { opacity: 0; transform: translateY(-2px) scale(.7); } 42%, 62% { opacity: 1; transform: none; } 76%, 100% { opacity: 0; transform: translateY(8px) scale(.9); } }
+  @keyframes m-signal { 0%, 34% { opacity: 0; transform: scale(.65); } 46%, 72% { opacity: .75; transform: scale(1); } 86%, 100% { opacity: 0; transform: scale(1.18); } }
   @keyframes m-spin  { to { transform: rotate(360deg); } }
   @keyframes m-popx  { 0%, 15% { opacity: 0; transform: scale(.3); } 30%, 100% { opacity: 1; transform: scale(1); } }
   @keyframes m-tumble{ 0% { transform: translateY(0) rotate(0); } 60% { transform: translateY(20px) rotate(35deg); } 100% { transform: translateY(20px) rotate(28deg); } }
   @keyframes m-nod   { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(7deg); } }
-  .m-sway  { transform-origin: 50% 15%; animation: m-sway 1.6s ease-in-out infinite; }
-  .m-drip  { animation: m-drip 1.8s ease-in infinite; }
+  .m-raise-l1 { transform-origin: 26px 59px; animation: m-raise-l 4.4s cubic-bezier(.34,1.28,.64,1) infinite; }
+  .m-raise-r2 { transform-origin: 102px 51px; animation: m-raise-r 4.4s cubic-bezier(.34,1.28,.64,1) .32s infinite; }
+  .m-raise-r3 { transform-origin: 154px 59px; animation: m-raise-r 4.4s cubic-bezier(.34,1.28,.64,1) .64s infinite; }
+  .m-sweat-c { transform-origin: center; animation: m-sweat-pop 4.4s ease-out .32s infinite; }
+  .m-signal-1 { transform-origin: 10px 29px; animation: m-signal 4.4s ease-out infinite; }
+  .m-signal-2 { transform-origin: 124px 20px; animation: m-signal 4.4s ease-out .32s infinite; }
+  .m-signal-3 { transform-origin: 170px 29px; animation: m-signal 4.4s ease-out .64s infinite; }
+  .motif:not(.shown) .m-raise-l1, .motif:not(.shown) .m-raise-r2, .motif:not(.shown) .m-raise-r3,
+  .motif:not(.shown) .m-sweat-c, .motif:not(.shown) .m-signal-1, .motif:not(.shown) .m-signal-2, .motif:not(.shown) .m-signal-3 { animation-play-state: paused; }
   .m-spin  { transform-origin: center; animation: m-spin 1.1s linear infinite; }
   .m-pop1  { animation: m-popx 2.4s ease-out infinite; }
   .m-pop2  { animation: m-popx 2.4s ease-out infinite .5s; }
@@ -221,7 +230,8 @@
   .m-nod2  { transform-origin: 50% 80%; animation: m-nod 1.4s ease-in-out infinite .3s; }
   .m-nod3  { transform-origin: 50% 80%; animation: m-nod 1.4s ease-in-out infinite .6s; }
   @media (prefers-reduced-motion: reduce) {
-    .m-sway, .m-drip, .m-spin, .m-pop1, .m-pop2, .m-pop3, .m-tumble, .m-nod1, .m-nod2, .m-nod3 { animation: none !important; }
+    .m-raise-l1, .m-raise-r2, .m-raise-r3, .m-sweat-c, .m-signal-1, .m-signal-2, .m-signal-3,
+    .m-spin, .m-pop1, .m-pop2, .m-pop3, .m-tumble, .m-nod1, .m-nod2, .m-nod3 { animation: none !important; }
   }
 
   /* screenshot placeholder */
@@ -428,11 +438,42 @@
     html: `
       <div class="row mid" style="gap:44px">
         <h2 style="flex:1;font-size:48px">Who here is nervous<br>about where data and analytics roles are heading?</h2>
-        <div class="motif" style="flex:0 0 236px;min-height:150px" data-step="1">
-          <svg viewBox="0 0 72 72" role="img" aria-label="A simple figure sweating nervously">
-            <circle class="m-sway" cx="36" cy="26" r="14" fill="none" stroke="var(--ink)" stroke-width="3"/>
-            <path d="M14 66 C14 46 58 46 58 66" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
-            <path class="m-drip" d="M50 20 q4 6 0 10 q-4 -2 -2 -6 q1 -2 2 -4Z" fill="var(--pine-mid)"/>
+        <div class="motif" style="flex:0 0 236px;min-height:168px;background:linear-gradient(145deg,var(--card),var(--mint));border-color:var(--pine)" data-step="1">
+          <svg viewBox="0 0 180 96" role="img" aria-label="Three nervous audience members raising their hands one after another" style="width:188px;height:100px">
+            <path class="m-signal-1" d="M2 29 q8 -9 16 0" fill="none" stroke="var(--ochre)" stroke-width="2" stroke-linecap="round"/>
+            <path class="m-signal-2" d="M116 20 q8 -9 16 0" fill="none" stroke="var(--pine-mid)" stroke-width="2" stroke-linecap="round"/>
+            <path class="m-signal-3" d="M162 29 q8 -9 16 0" fill="none" stroke="var(--brick)" stroke-width="2" stroke-linecap="round"/>
+
+            <g>
+              <circle cx="38" cy="38" r="10" fill="var(--secondary)" stroke="var(--ink)" stroke-width="3"/>
+              <path d="M20 86 C20 62 56 62 56 86" fill="var(--paper)" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+              <g class="m-raise-l1">
+                <path d="M26 59 L13 78" fill="none" stroke="var(--ochre)" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="13" cy="78" r="3" fill="var(--ochre)"/>
+              </g>
+              <path d="M50 58 L70 84" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+            </g>
+
+            <g>
+              <circle cx="90" cy="31" r="11" fill="var(--mint)" stroke="var(--ink)" stroke-width="3"/>
+              <path d="M70 86 C70 58 110 58 110 86" fill="var(--paper)" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M77 52 L62 78" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+              <g class="m-raise-r2">
+                <path d="M102 51 L124 82" fill="none" stroke="var(--pine)" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="124" cy="82" r="3" fill="var(--pine)"/>
+              </g>
+              <path class="m-sweat-c" d="M105 25 q5 7 0 12 q-5 -2 -3 -7 q2 -3 3 -5Z" fill="var(--pine-mid)"/>
+            </g>
+
+            <g>
+              <circle cx="142" cy="38" r="10" fill="#F5EAE0" stroke="var(--ink)" stroke-width="3"/>
+              <path d="M124 86 C124 62 160 62 160 86" fill="var(--paper)" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M130 58 L110 84" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+              <g class="m-raise-r3">
+                <path d="M154 59 L167 78" fill="none" stroke="var(--brick)" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="167" cy="78" r="3" fill="var(--brick)"/>
+              </g>
+            </g>
           </svg>
           <div class="cap">nervous, but here</div>
         </div>
